@@ -28,7 +28,7 @@ export default function Detalle( ){
             </div>
           
             <div class="table-responsive">
-                <table class="table table-bordered">
+                <table className="table table-bordered" Style="text-align: center">
                     <thead>
                     <tr>
                         <th>Id</th>

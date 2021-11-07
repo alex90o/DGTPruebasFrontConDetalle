@@ -31,7 +31,7 @@ export default function Historial( ){
             </div>
           
             <div class="table-responsive">
-                <table class="table table-bordered">
+                <table class="table table-bordered" Style="text-align: center">
                     <thead>
                     <tr>
                         <th>Id</th>
