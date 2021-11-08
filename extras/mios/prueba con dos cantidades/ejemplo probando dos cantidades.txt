@@ -3,13 +3,14 @@ import { BsFillTrashFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
 import { useHistory } from 'react-router'
-
+import { ItemCount } from '../ItemCount/ItemCount'
  
-export const CartScreen = () => {
+export const CartScreen = ({ id, name, price, img, description, category, stock}) => {
     const {goBack, push} = useHistory()
     const {carrito, vaciarCarrito, removeItem, calcularTotal, setCarrito} = useContext(CartContext)
     const [counter, setCounter] = useState(carrito)
     const [initialValues, setValues]= useState(carrito)
+    const [cantidad, setCantidad] = useState(carrito.cantidad)
     
 
 
@@ -38,27 +39,30 @@ export const CartScreen = () => {
             <table className="table table-bordered" Style="text-align: center">
                 <thead>
                 <tr>
-                    <th><h5>Nombre</h5></th>
-                    <th><h5>Código</h5></th>
-                    <th><h5>Precio</h5></th>
-                    <th><h5>Cantidad</h5></th>
-                    <th><h5>Total</h5></th>
-                    <th><h5>Quitar</h5></th>
+                    <th><h4>Nombre</h4></th>
+                    <th><h4>Código</h4></th>
+                    <th><h4>Precio</h4></th>
+                    <th><h4>Cantidad</h4></th>
+                    <th><h4>Cantidad2</h4></th>
+                    <th><h4>Total</h4></th>
+                    <th><h4>Quitar</h4></th>
                 </tr>
                 </thead>
                 
                 
                
                 <tr>
-                    <td><h6>{prod.name}</h6></td>
-                    <td><h6>{prod.id}</h6></td>
-                    <td><h6>{prod.price}</h6></td>
+                    <td><h5>{prod.name}</h5></td>
+                    <td><h5>{prod.id}</h5></td>
+                    <td><h5>{prod.price}</h5></td>
                     <td>
-                    <button className="btn btn-success" Style="color: black" sonClick={() => {if(counter !== 1) {setCounter(counter - 1)} }}>-</button> 
-                    <span className="mx-3">{prod.cantidad}</span>
-                    <button className="btn btn-success" Style="color: black" onClick={() => { if(counter !== prod.stock){ setCounter(counter+1)}}}>+</button></td>
-                    <td><h5>{prod.price * prod.cantidad}</h5></td>
+                    <button className="btn btn-success" onClick={() => {if(cantidad !== 1) {setCantidad(cantidad - 1)} }}>-</button> 
+                    <span className="mx-3">{cantidad}</span>
+                    <button className="btn btn-success" onClick={() => { if(cantidad !== prod.stock){ setCantidad(cantidad+1)}}}>+</button></td>
+                    <ItemCount cantidad={cantidad} modify={setCantidad} max={stock}/>
+                    <td><h5>{prod.price}*{cantidad}</h5></td>
                     <td>
+                    
                         <form >
                         <button className="btn btn-danger" onClick={() => removeItem(prod.id)}>
                                         <BsFillTrashFill/>
