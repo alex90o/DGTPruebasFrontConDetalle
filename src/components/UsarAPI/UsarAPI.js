@@ -6,7 +6,7 @@ const urlApi = 'http://localhost:8080/api/productos'
 class UsarAPI {
     getProductos(){
         
-        return axios.get(urlApi);
+        return axios.get(urlApi); //no olvidase de intallar axios 
         //console.log(urlApi);
         
     }

@@ -2,6 +2,7 @@ import React from 'react'
 import {Card, Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
+
 export const Item = ( {id, name, price, img, description, category} ) => {
 
     // console.log(props)
