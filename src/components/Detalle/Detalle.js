@@ -11,7 +11,8 @@ export default function Detalle( ){
         <div className="row">    
         <div class="col-12">
         <div>
-        <h1 class="col-6">Detalle de Compra</h1>
+        {/*<h1 class="col-6">Detalle de Compra</h1>*/}
+        <h2>Detalle de Compra</h2>
         <button 
                 className="btn btn-primary"
                 onClick={() => goBack()}
@@ -21,7 +22,8 @@ export default function Detalle( ){
         
         </div>
         <hr/>
-        <h2>Cliente: Nombre</h2>
+        {/*<h2>Cliente: Nombre</h2>*/}
+        <h3>Cliente: Nombre</h3>
         <hr/>
         <h3>Total: $Monto</h3>
             <div  class="alert">

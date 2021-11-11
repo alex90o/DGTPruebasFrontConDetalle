@@ -65,7 +65,15 @@ export const CartScreen = () => {
                                     </button>
                         </form>
                     </td>
-                </tr>    
+                </tr>
+               
+             
+               
+                                      
+               
+                         
+            
+               
             </table>
         </div>
        
@@ -76,8 +84,7 @@ export const CartScreen = () => {
                         }
  
                         <hr/>
-                        <h4 className="my-3" Style="text-align: right">Total:${calcularTotal()}</h4>
-                        <hr/>
+                        <h3 className="my-3">Total: ${calcularTotal()}</h3>
                         <button
                         className="btn btn-outline-primary mx-4"
                         onClick={()=>push("/")}

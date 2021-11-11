@@ -1,0 +1,25 @@
+public Producto(Integer id, String nombre, String descripcion, Double precio, Integer cantidad, String imagen) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+		this.precio = precio;
+		this.cantidad = cantidad;
+		this.imagen = imagen;
+	}
+
+http://localhost:8080/api/productos
+
+
+ componentDidMount(){
+        UsarAPI.getProductos().then((response)=>{
+                this.setState({
+                    productos:response.data
+                })
+            }
+        )
+    }
+
+estamos usando una nombre que esta reservado en este caso 
+
+componentDidMount

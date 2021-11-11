@@ -12,7 +12,7 @@ export default function Historial( ){
         <div className="row">    
         <div class="col-12">
         <div>
-        <h1 class="col-6">Compras Realizadas</h1>
+        <h2>Compras Realizadas</h2>
        
         <button
                         className="btn btn-outline-primary mx-4"
@@ -26,7 +26,7 @@ export default function Historial( ){
                             Eliminar Historial
         </button> {/*solo ejemplo no hace nada por ahora --- va a inicio para que no de error*/}
         </div>
-        <h2>Cliente: Nombre</h2>
+        <h3>Cliente: Nombre</h3>
             <div  class="alert">
             </div>
           

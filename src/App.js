@@ -17,6 +17,9 @@ import { UserAuthenticate } from './components/UserAuthenticate/UserAuthenticate
 import { Clock } from './ejemplos/Clock/Clock';
 import Historial from './components/Historial/Historial';
 import Detalle from './components/Detalle/Detalle';
+import ProductosAPI from './components/ProductosAPI';
+import UsarAPI from './components/UsarAPI/UsarAPI';
+
 
 
 
@@ -26,6 +29,13 @@ function App() {
 
   return (
     <>
+    {/*
+    <div>
+    
+                  <ProductosAPI/>
+      
+    </div>
+    */}
       <UIProvider>
         <CartProvider>
 
@@ -63,6 +73,13 @@ function App() {
 
               <Route path="*">
                   <Redirect to="/"/>
+              </Route>
+
+              <Route exact path="/usarapi">
+                  <UsarAPI/>
+              </Route>
+              <Route exact path="/pructoapi">
+                  <ProductosAPI/>
               </Route>
               {/* <Route path="*">
                   <h2>404... no encontrado</h2>
